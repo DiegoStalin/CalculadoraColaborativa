@@ -101,8 +101,10 @@ namespace CalculadoraApp
                             numero1 = double.Parse(Console.ReadLine());
                             Console.Write("Digita el número de exponente: ");
                             numero2 = double.Parse(Console.ReadLine());
-                            double resp_potencia=numero1 ^ numero2;
+                            double resp_potencia=Math.Pow(numero1, numero2);
                             Console.WriteLine("La potencia de un numero con base " + numero1 + " con exponente " + numero2 + " es: " + resp_potencia);
+                            cuenta_operaciones++;
+                            break;
                             
 
 
