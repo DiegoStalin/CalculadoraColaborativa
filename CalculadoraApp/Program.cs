@@ -93,7 +93,14 @@ namespace CalculadoraApp
                                 cuenta_operaciones++;
                             }
                             break;
-
+                        case 8:
+                            Console.WriteLine("\n--- OPERACIÓN RAÍZ CÚBICA ---");
+                            Console.Write("Digita el número: ");
+                            double numeroRaiz = double.Parse(Console.ReadLine());
+                            double resultadoRaiz = Math.Pow(numeroRaiz, 1.0 / 3.0);
+                            Console.WriteLine($"El resultado de la Raíz Cúbica es: {resultadoRaiz}");
+                            cuenta_operaciones++;
+                            break;
 
                     }
 
