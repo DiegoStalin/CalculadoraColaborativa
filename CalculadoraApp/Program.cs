@@ -13,7 +13,7 @@ namespace CalculadoraApp
         {
             // Definir Variables
 
-            char continuar='S';
+            char continuar = 'S';
             string nombre, valida;
             int cuenta_operaciones = 0;
             int operacion = 0;
@@ -33,10 +33,11 @@ namespace CalculadoraApp
                 Console.WriteLine(" 2.-RESTAR ");
                 Console.WriteLine(" 3.-MULTIPLICAR ");
                 Console.WriteLine(" 4.-DIVIDIR ");
+                Console.WriteLine(" 7.-FACTORIAL ");
                 Console.Write(" Escoge una operación a ejecutar: ");
                 operacion = int.Parse(Console.ReadLine());
 
-                if (operacion >= 1 && operacion <= 4)
+                if (operacion >= 1 && operacion <= 7)
                 {
                     switch (operacion)
                     {
@@ -93,7 +94,25 @@ namespace CalculadoraApp
                                 cuenta_operaciones++;
                             }
                             break;
+                        case 7:
+                            Console.WriteLine("=== OPERACION FACTORIAL ==");
+                            Console.Write("Ingrese el numero que desea saber su factorial: ");
+                            int numeroIngresado = int.Parse(Console.ReadLine());
+                            while (numeroIngresado < 0)
+                            {
+                                Console.WriteLine("Error: no puede ingresar un numero negativo.");
+                                Console.Write("Ingrese nuevamente el numero: ");
+                                numeroIngresado = int.Parse(Console.ReadLine());
+                            }
+                            double fact = 1;
+                            for (int i = 1; i <= numeroIngresado; i++)
+                            {
+                                fact *= i;
+                            }
 
+                            Console.WriteLine("numero Ingresado: " + numeroIngresado + "\nSu factorial es" + " = " + fact);
+                            cuenta_operaciones++;
+                            break;
 
                     }
 
@@ -121,7 +140,7 @@ namespace CalculadoraApp
             Console.WriteLine("\nUsuario: " + nombre + " Ha realizado " + cuenta_operaciones + " operaciones. \nSaliendo del Sistema.");
 
 
-            
+
 
         }
     }
