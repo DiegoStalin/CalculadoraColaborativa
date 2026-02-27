@@ -33,10 +33,11 @@ namespace CalculadoraApp
                 Console.WriteLine(" 2.-RESTAR ");
                 Console.WriteLine(" 3.-MULTIPLICAR ");
                 Console.WriteLine(" 4.-DIVIDIR ");
+                Console.WriteLine(" 5.-POTENCIA ");
                 Console.Write(" Escoge una operación a ejecutar: ");
                 operacion = int.Parse(Console.ReadLine());
 
-                if (operacion >= 1 && operacion <= 4)
+                if (operacion >= 1 && operacion <= 8)
                 {
                     switch (operacion)
                     {
@@ -93,6 +94,16 @@ namespace CalculadoraApp
                                 cuenta_operaciones++;
                             }
                             break;
+
+                        case 5:
+                            Console.WriteLine("\n ---OPERACIÓN POTENCIA---");
+                            Console.Write("Digita el número base: ");
+                            numero1 = double.Parse(Console.ReadLine());
+                            Console.Write("Digita el número de exponente: ");
+                            numero2 = double.Parse(Console.ReadLine());
+                            double resp_potencia=numero1 ^ numero2;
+                            Console.WriteLine("La potencia de un numero con base " + numero1 + " con exponente " + numero2 + " es: " + resp_potencia);
+                            
 
 
                     }
