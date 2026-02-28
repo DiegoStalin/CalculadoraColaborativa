@@ -105,9 +105,14 @@ namespace CalculadoraApp
                             Console.WriteLine("La potencia de un numero con base " + numero1 + " con exponente " + numero2 + " es: " + resp_potencia);
                             cuenta_operaciones++;
                             break;
-                            
 
-
+                        case 6:
+                            Console.WriteLine("\n ---OPERACIÓN RAIZ CUADRADA---");
+                            Console.Write("Digita el número base: ");
+                            numero1 = double.Parse(Console.ReadLine());
+                            numero2 = Math.Sqrt(numero1);
+                            Console.WriteLine("La raiz cuadrada de el numero base " + numero1 + ", es de: " + numero2);
+                            break;
                     }
 
                 }
