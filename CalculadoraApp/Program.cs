@@ -34,6 +34,7 @@ namespace CalculadoraApp
                 Console.WriteLine(" 3.-MULTIPLICAR ");
                 Console.WriteLine(" 4.-DIVIDIR ");
                 Console.WriteLine(" 5.-POTENCIA ");
+                Console.WriteLine(" 6.-RAIZ CUADRADA ");
                 Console.Write(" Escoge una operación a ejecutar: ");
                 operacion = int.Parse(Console.ReadLine());
 
