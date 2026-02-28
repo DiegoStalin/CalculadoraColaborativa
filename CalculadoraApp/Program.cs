@@ -13,7 +13,7 @@ namespace CalculadoraApp
         {
             // Definir Variables
 
-            char continuar='S';
+            char continuar = 'S';
             string nombre, valida;
             int cuenta_operaciones = 0;
             int operacion = 0;
@@ -33,8 +33,19 @@ namespace CalculadoraApp
                 Console.WriteLine(" 2.-RESTAR ");
                 Console.WriteLine(" 3.-MULTIPLICAR ");
                 Console.WriteLine(" 4.-DIVIDIR ");
+<<<<<<< feature-raizcuadrada
                 Console.WriteLine(" 5.-POTENCIA ");
                 Console.WriteLine(" 6.-RAIZ CUADRADA ");
+=======
+
+                Console.WriteLine(" 7.-FACTORIAL ");
+                Console.Write(" Escoge una operación a ejecutar: ");
+                operacion = int.Parse(Console.ReadLine());
+
+                if (operacion >= 1 && operacion <= 7)
+
+                    Console.WriteLine(" 5.-POTENCIA ");
+>>>>>>> main
                 Console.Write(" Escoge una operación a ejecutar: ");
                 operacion = int.Parse(Console.ReadLine());
 
@@ -95,17 +106,37 @@ namespace CalculadoraApp
                                 cuenta_operaciones++;
                             }
                             break;
-
                         case 5:
                             Console.WriteLine("\n ---OPERACIÓN POTENCIA---");
                             Console.Write("Digita el número base: ");
                             numero1 = double.Parse(Console.ReadLine());
                             Console.Write("Digita el número de exponente: ");
                             numero2 = double.Parse(Console.ReadLine());
-                            double resp_potencia=Math.Pow(numero1, numero2);
+                            double resp_potencia = Math.Pow(numero1, numero2);
                             Console.WriteLine("La potencia de un numero con base " + numero1 + " con exponente " + numero2 + " es: " + resp_potencia);
                             cuenta_operaciones++;
                             break;
+<<<<<<< feature-raizcuadrada
+=======
+                        case 7:
+                            Console.WriteLine("=== OPERACION FACTORIAL ==");
+                            Console.Write("Ingrese el numero que desea saber su factorial: ");
+                            int numeroIngresado = int.Parse(Console.ReadLine());
+                            while (numeroIngresado < 0)
+                            {
+                                Console.WriteLine("Error: no puede ingresar un numero negativo.");
+                                Console.Write("Ingrese nuevamente el numero: ");
+                                numeroIngresado = int.Parse(Console.ReadLine());
+                            }
+                            double fact = 1;
+                            for (int i = 1; i <= numeroIngresado; i++)
+                            {
+                                fact *= i;
+                            }
+                            Console.WriteLine("numero Ingresado: " + numeroIngresado + "\nSu factorial es" + " = " + fact);
+                            cuenta_operaciones++;
+                            break;
+>>>>>>> main
 
                         case 6:
                             Console.WriteLine("\n ---OPERACIÓN RAIZ CUADRADA---");
@@ -140,7 +171,7 @@ namespace CalculadoraApp
             Console.WriteLine("\nUsuario: " + nombre + " Ha realizado " + cuenta_operaciones + " operaciones. \nSaliendo del Sistema.");
 
 
-            
+
 
         }
     }
