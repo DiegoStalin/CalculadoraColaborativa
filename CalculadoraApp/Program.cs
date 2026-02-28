@@ -11,16 +11,16 @@ namespace CalculadoraApp
     {
         static void Main(string[] args)
         {
-            // Definir Variables
 
-            char continuar='S';
+
+            char continuar = 'S';
             string nombre, valida;
             int cuenta_operaciones = 0;
             int operacion = 0;
             double numero1;
             double numero2;
 
-            // Estructura
+
             Console.WriteLine(" ******* BIENVENIDO/A ******* ");
             Console.WriteLine(" CALCULADORA BASICA ");
             Console.Write("Escribe tu Nombre: ");
@@ -33,10 +33,17 @@ namespace CalculadoraApp
                 Console.WriteLine(" 2.-RESTAR ");
                 Console.WriteLine(" 3.-MULTIPLICAR ");
                 Console.WriteLine(" 4.-DIVIDIR ");
+                Console.WriteLine(" 5.-POTENCIA ");
+                Console.WriteLine(" 6.-RAIZ CUADRADA ");
+                Console.WriteLine(" 7.-FACTORIAL ");
+                Console.WriteLine(" 8.-RAIZ CUBICA ");
                 Console.Write(" Escoge una operación a ejecutar: ");
                 operacion = int.Parse(Console.ReadLine());
 
-                if (operacion >= 1 && operacion <= 4)
+                Console.Write(" Escoge una operación a ejecutar: ");
+                operacion = int.Parse(Console.ReadLine());
+
+                if (operacion >= 1 && operacion <= 8)
                 {
                     switch (operacion)
                     {
@@ -93,6 +100,41 @@ namespace CalculadoraApp
                                 cuenta_operaciones++;
                             }
                             break;
+                        case 5:
+                            Console.WriteLine("\n ---OPERACIÓN POTENCIA---");
+                            Console.Write("Digita el número base: ");
+                            numero1 = double.Parse(Console.ReadLine());
+                            Console.Write("Digita el número de exponente: ");
+                            numero2 = double.Parse(Console.ReadLine());
+                            double resp_potencia = Math.Pow(numero1, numero2);
+                            Console.WriteLine("La potencia de un numero con base " + numero1 + " con exponente " + numero2 + " es: " + resp_potencia);
+                            cuenta_operaciones++;
+                            break;
+                        case 6:
+                            Console.WriteLine("\n ---OPERACIÓN RAIZ CUADRADA---");
+                            Console.Write("Digita el número base: ");
+                            numero1 = double.Parse(Console.ReadLine());
+                            numero2 = Math.Sqrt(numero1);
+                            Console.WriteLine("La raiz cuadrada de el numero base " + numero1 + ", es de: " + numero2);
+                            break;
+                        case 7:
+                            Console.WriteLine("=== OPERACION FACTORIAL ==");
+                            Console.Write("Ingrese el numero que desea saber su factorial: ");
+                            int numeroIngresado = int.Parse(Console.ReadLine());
+                            while (numeroIngresado < 0)
+                            {
+                                Console.WriteLine("Error: no puede ingresar un numero negativo.");
+                                Console.Write("Ingrese nuevamente el numero: ");
+                                numeroIngresado = int.Parse(Console.ReadLine());
+                            }
+                            double fact = 1;
+                            for (int i = 1; i <= numeroIngresado; i++)
+                            {
+                                fact *= i;
+                            }
+                            Console.WriteLine("numero Ingresado: " + numeroIngresado + "\nSu factorial es" + " = " + fact);
+                            cuenta_operaciones++;
+                            break;
                         case 8:
                             Console.WriteLine("\n--- OPERACIÓN RAÍZ CÚBICA ---");
                             Console.Write("Digita el número: ");
@@ -128,7 +170,7 @@ namespace CalculadoraApp
             Console.WriteLine("\nUsuario: " + nombre + " Ha realizado " + cuenta_operaciones + " operaciones. \nSaliendo del Sistema.");
 
 
-            
+
 
         }
     }
