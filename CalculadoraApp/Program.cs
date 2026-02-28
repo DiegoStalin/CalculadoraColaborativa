@@ -33,11 +33,19 @@ namespace CalculadoraApp
                 Console.WriteLine(" 2.-RESTAR ");
                 Console.WriteLine(" 3.-MULTIPLICAR ");
                 Console.WriteLine(" 4.-DIVIDIR ");
+<<<<<<< HEAD
                 Console.WriteLine(" 7.-FACTORIAL ");
                 Console.Write(" Escoge una operación a ejecutar: ");
                 operacion = int.Parse(Console.ReadLine());
 
                 if (operacion >= 1 && operacion <= 7)
+=======
+                Console.WriteLine(" 5.-POTENCIA ");
+                Console.Write(" Escoge una operación a ejecutar: ");
+                operacion = int.Parse(Console.ReadLine());
+
+                if (operacion >= 1 && operacion <= 8)
+>>>>>>> main
                 {
                     switch (operacion)
                     {
@@ -110,10 +118,41 @@ namespace CalculadoraApp
                                 fact *= i;
                             }
 
+<<<<<<< HEAD
                             Console.WriteLine("numero Ingresado: " + numeroIngresado + "\nSu factorial es" + " = " + fact);
                             cuenta_operaciones++;
                             break;
+=======
+                        case 5:
+                            Console.WriteLine("\n ---OPERACIÓN POTENCIA---");
+                            Console.Write("Digita el número base: ");
+                            numero1 = double.Parse(Console.ReadLine());
+                            Console.Write("Digita el número de exponente: ");
+                            numero2 = double.Parse(Console.ReadLine());
+                            double resp_potencia = Math.Pow(numero1, numero2);
+                            Console.WriteLine("La potencia de un numero con base " + numero1 + " con exponente " + numero2 + " es: " + resp_potencia);
+                            cuenta_operaciones++;
+                            break;
+                        case 7:
+                            Console.WriteLine("=== OPERACION FACTORIAL ==");
+                            Console.Write("Ingrese el numero que desea saber su factorial: ");
+                            int numeroIngresado = int.Parse(Console.ReadLine());
+                            while (numeroIngresado < 0)
+                            {
+                                Console.WriteLine("Error: no puede ingresar un numero negativo.");
+                                Console.Write("Ingrese nuevamente el numero: ");
+                                numeroIngresado = int.Parse(Console.ReadLine());
+                            }
+                            double fact = 1;
+                            for (int i = 1; i <= numeroIngresado; i++)
+                            {
+                                fact *= i;
+                            }
+>>>>>>> main
 
+                            Console.WriteLine("numero Ingresado: " + numeroIngresado + "\nSu factorial es" + " = " + fact);
+                            cuenta_operaciones++;
+                            break;
                     }
 
                 }
