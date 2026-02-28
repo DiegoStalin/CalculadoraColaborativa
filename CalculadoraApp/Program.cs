@@ -36,6 +36,7 @@ namespace CalculadoraApp
                 Console.WriteLine(" 5.-POTENCIA ");
                 Console.WriteLine(" 6.-RAIZ CUADRADA ");
                 Console.WriteLine(" 7.-FACTORIAL ");
+                Console.WriteLine(" 8.-RAIZ CUBICA ");
                 Console.Write(" Escoge una operación a ejecutar: ");
                 operacion = int.Parse(Console.ReadLine());
 
@@ -134,6 +135,15 @@ namespace CalculadoraApp
                             Console.WriteLine("numero Ingresado: " + numeroIngresado + "\nSu factorial es" + " = " + fact);
                             cuenta_operaciones++;
                             break;
+                        case 8:
+                            Console.WriteLine("\n--- OPERACIÓN RAÍZ CÚBICA ---");
+                            Console.Write("Digita el número: ");
+                            double numeroRaiz = double.Parse(Console.ReadLine());
+                            double resultadoRaiz = Math.Pow(numeroRaiz, 1.0 / 3.0);
+                            Console.WriteLine($"El resultado de la Raíz Cúbica es: {resultadoRaiz}");
+                            cuenta_operaciones++;
+                            break;
+
                     }
 
                 }
