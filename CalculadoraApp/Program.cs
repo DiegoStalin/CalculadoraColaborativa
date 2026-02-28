@@ -11,7 +11,7 @@ namespace CalculadoraApp
     {
         static void Main(string[] args)
         {
-            // Definir Variables
+
 
             char continuar = 'S';
             string nombre, valida;
@@ -20,7 +20,7 @@ namespace CalculadoraApp
             double numero1;
             double numero2;
 
-            // Estructura
+
             Console.WriteLine(" ******* BIENVENIDO/A ******* ");
             Console.WriteLine(" CALCULADORA BASICA ");
             Console.Write("Escribe tu Nombre: ");
@@ -33,19 +33,12 @@ namespace CalculadoraApp
                 Console.WriteLine(" 2.-RESTAR ");
                 Console.WriteLine(" 3.-MULTIPLICAR ");
                 Console.WriteLine(" 4.-DIVIDIR ");
-<<<<<<< feature-raizcuadrada
                 Console.WriteLine(" 5.-POTENCIA ");
                 Console.WriteLine(" 6.-RAIZ CUADRADA ");
-=======
-
                 Console.WriteLine(" 7.-FACTORIAL ");
                 Console.Write(" Escoge una operación a ejecutar: ");
                 operacion = int.Parse(Console.ReadLine());
 
-                if (operacion >= 1 && operacion <= 7)
-
-                    Console.WriteLine(" 5.-POTENCIA ");
->>>>>>> main
                 Console.Write(" Escoge una operación a ejecutar: ");
                 operacion = int.Parse(Console.ReadLine());
 
@@ -116,8 +109,13 @@ namespace CalculadoraApp
                             Console.WriteLine("La potencia de un numero con base " + numero1 + " con exponente " + numero2 + " es: " + resp_potencia);
                             cuenta_operaciones++;
                             break;
-<<<<<<< feature-raizcuadrada
-=======
+                        case 6:
+                            Console.WriteLine("\n ---OPERACIÓN RAIZ CUADRADA---");
+                            Console.Write("Digita el número base: ");
+                            numero1 = double.Parse(Console.ReadLine());
+                            numero2 = Math.Sqrt(numero1);
+                            Console.WriteLine("La raiz cuadrada de el numero base " + numero1 + ", es de: " + numero2);
+                            break;
                         case 7:
                             Console.WriteLine("=== OPERACION FACTORIAL ==");
                             Console.Write("Ingrese el numero que desea saber su factorial: ");
@@ -135,15 +133,6 @@ namespace CalculadoraApp
                             }
                             Console.WriteLine("numero Ingresado: " + numeroIngresado + "\nSu factorial es" + " = " + fact);
                             cuenta_operaciones++;
-                            break;
->>>>>>> main
-
-                        case 6:
-                            Console.WriteLine("\n ---OPERACIÓN RAIZ CUADRADA---");
-                            Console.Write("Digita el número base: ");
-                            numero1 = double.Parse(Console.ReadLine());
-                            numero2 = Math.Sqrt(numero1);
-                            Console.WriteLine("La raiz cuadrada de el numero base " + numero1 + ", es de: " + numero2);
                             break;
                     }
 
